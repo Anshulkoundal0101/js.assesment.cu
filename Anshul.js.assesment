@@ -1,0 +1,34 @@
+const cu = [];
+function mintNFT(name, skincolor, shoe, age, Biling) {
+  const obj_NFT = {
+    "Name": name,
+    "Skin_Color": skincolor,
+    "Shoe": shoe,
+    "age": age,
+    "Biling": Biling,
+  };
+  cu.push(obj_NFT);
+  console.log("Name:" + name);
+}
+
+function listNFTs() {
+  for (let i = 0; i < cu.length; i++) {
+    console.log(
+      `\nNFT ID:${i + 1} , Name: ${cu[i].Name} , Skin_Color: ${cu[i].Skin_Color
+      } , Shoe: ${cu[i].Shoe} , age: ${cu[i].age} 
+      , Biling:${cu[i].Biling}`);
+  }
+}
+function getTotalSupply() {
+  return cu.length;
+}
+
+// call your functions below this line
+
+mintNFT("Anshul", "brown", "toe", "19", "Silver_Store");
+mintNFT("koundal", "blue", "low space", "20", "Bronze_store");
+mintNFT("Neelam", "black", "high space", "23", "Gold_store");
+mintNFT("Divu", "pinkish", "blueprint", "24", "mafia_store");
+mintNFT("shivu", "yelloish", "blackprint", "34", "book_store");
+listNFTs();
+console.log("\nNumber of NFTs created is:" + getTotalSupply());
